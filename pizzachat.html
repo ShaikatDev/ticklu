@@ -1,0 +1,101 @@
+<html>
+    <head>
+	
+	<style>
+.container{
+	height:1000px;
+top-left: 400px;
+
+	
+	background:#B3E0FF;
+	}
+	.mid{
+	height:600px;
+	width: 300px;
+	background:#1A66FF;
+	top-left: 400px;margin-left: 500px;
+	text-align: center;
+
+	}
+	
+	
+	</style>
+        <script>
+            know = 
+			{
+                "hello" : "hi",
+				"hello" : "PIZZA SHOP : Hi",
+				"Hello" : "PIZZA SHOP : hi",
+				"hi" : "PIZZA SHOP : Hi",
+				"Hi" : "PIZZA SHOP : Hi",
+                "how are you?" : "PIZZA SHOP : good",
+				"How are you?" : "PIZZA SHOP : good",
+                "ok" : "PIZZA SHOP : :)",
+				"Ok" : "PIZZA SHOP : :)",
+				"Good morning" : "PIZZA SHOP : Good morning , I hope you are doing well",
+				"good morning" : "PIZZA SHOP : Good morning , I hope you are doing well",
+				"Good afternoon" : "PIZZA SHOP : Good afternoon , I hope you are doing well",
+				"good afternoon" : "PIZZA SHOP : Good afternoon , I hope you are doing well",
+				"Good evening" : "PIZZA SHOP : Good evening , I hope you are doing well",
+				"good evening" : "PIZZA SHOP : Good evening , I hope you are doing well",
+				"need help" : "PIZZA SHOP : How can we help u?",
+				"Need help" : "PIZZA SHOP : How can we help u?",
+				"What about pizza" : "PIZZA SHOP : Do you like pizza",
+				"what about pizza" : "PIZZA SHOP : Do you like pizza",
+				"Yes" : "PIZZA SHOP : Nice, You should order for pizza.",
+				"yes" : "PIZZA SHOP : Nice, You should order for pizza.",
+				"I want to order a pizza." : "PIZZA SHOP : Of course.Why not? 1.extra chese chicken pizza?  2.extra chese beef pizza? 3.extra chese masala chicken pizza?  4.extra chese masala beef pizza? Please enter the category number of the pizza you want to order?",
+				"1" : "PIZZA SHOP : Ok sir/Mam,we saved your provided information.What topping would you like?",
+				"2" : "PIZZA SHOP : Ok sir/Mam,we saved your provided information.What topping would you like?",
+				"3" : "PIZZA SHOP : Ok sir/Mam,we saved your provided information.What topping would you like?",
+				"4" : "PIZZA SHOP : Ok sir/Mam,we saved your provided information.What topping would you like?",
+				"Hawaiian?" : "PIZZA SHOP : What size of pizza would you like to order? extra large/large/medium/small?",
+				"hawaiian?" : "PIZZA SHOP : What size of pizza would you like to order? extra large/large/medium/small?",
+				"Medium" : "PIZZA SHOP : Thank you.Your medium Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"medium" : "PIZZA SHOP : Thank you.Your medium Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"small" : "PIZZA SHOP : Thank you.Your small Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"Small" : "PIZZA SHOP : Thank you.Your small Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"large" : "PIZZA SHOP : Thank you.Your large Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"Large" : "PIZZA SHOP : Thank you.Your large Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"extra large" : "PIZZA SHOP : Thank you.Your extra large Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"Extra large" : "PIZZA SHOP : Thank you.Your extra large Hawaiian will be ready for collection in 15 minutes and it will be delivered in half an hour.",
+				"How much time need" : "PIZZA SHOP : You will get your desired pizza soon.",
+				"how much time need" : "PIZZA SHOP : You will get your desired pizza soon.",
+				"Let discuss pizza" : "PIZZA SHOP : Yes",
+				"let discuss pizza" : "PIZZA SHOP : Yes",
+				"What do you think about pizza" : "PIZZA SHOP : Eating fresh pizza refreshes our minds.",
+				"what do you think about pizza" : "PIZZA SHOP : Eating fresh pizza refreshes our minds.",
+				"I LIKE to eat fresh pizza" : "PIZZA SHOP : Sure sir/madam. We serve always fresh pizza",
+				"thank you" : "PIZZA SHOP : Welcome Sir/Madam.",
+				"Thank you" : "PIZZA SHOP : Welcome Sir/Madam.",
+				"Thanks" : "PIZZA SHOP : Welcome Sir/Madam.",
+				"thanks" : "PIZZA SHOP : Welcome Sir/Madam.",
+				"Good night" : "PIZZA SHOP : Good Night",
+				"good Night" : "PIZZA SHOP : Good Night",
+				"Bye" : "PIZZA SHOP : Bye",
+				"bye" : "PIZZA SHOP : bye",
+				
+				
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "Sorry! Please use simpler and more formal version of English.<br>";
+                }
+            } 
+        </script>
+    </head>
+    <body>
+	<div class="container">
+	<div class="mid">
+		
+        <p id="chatLog">- - C H A T - -<br></p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+		</div>
+	</div>
+    </body>
+</html>
